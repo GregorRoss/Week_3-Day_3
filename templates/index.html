@@ -1,0 +1,24 @@
+<html>
+    <header>
+        <title {{title}} - The Food Place> </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </header>
+    <body>
+        <header>
+            <h1>Food order list</h1>
+        </header>
+
+        {% for order in orderslist %}
+        <div id="order_list">
+             {{order.name}}:{{order.date}}:{{order.quantity}}:{{order.food}}:{{order.topping}}{{order.description}}
+             <a href="{{ url_for('single_order', id=order.id)}}"> View Order</a>
+        </div>
+
+       {% endfor %}
+    </body>
+
+    <footer>
+
+    </footer>
+
+</html>

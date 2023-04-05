@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title {{title}} - The Food Place></title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <header>
+            <h1>Single Order View</h1>
+        </header>
+
+        <div>
+            <h1>Order number {{order.id}} Customer Name {{order.name}} </h1>
+            <h2> Main order: {{order.food}} </h2>
+            <p> Description : {{order.description}} </p>
+            <h2> Customer Name : {{order.name}}:</h2>
+            <h3> Order Date : {{order.date}}: </h3>
+            <h3> Quantity : {{order.quantity}}: </h3>
+            <p> Food : {{order.food}}: </p>
+            <p> Topping : {{order.topping}}: </p>
+            <p> Description : {{order.description}}</p>
+        </div>
+
+    </body>
+
+    <footer>
+
+    </footer>
+
+</html>
